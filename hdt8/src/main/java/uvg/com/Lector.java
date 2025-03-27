@@ -5,8 +5,8 @@
  * @author: Adrian Penagos y Andrés Ismalej
  */
 
-package hdt8.src.main.java.uvg.com;
+package uvg.com;
 
-public class Pacientes {
+public class Lector {
     
 }
