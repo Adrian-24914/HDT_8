@@ -1,0 +1,200 @@
+Marta Salazar, gastroenteritis, C
+Martín Barrera, sangrado de encías, C
+Felipe Villanueva, revisión de exámenes, E
+Óscar Moraga, consulta por información, E
+Graciela Estrada, hemorroides, C
+Rebeca Contreras, malestar por medicación, D
+Samuel Carrillo, erupción cutánea leve, D
+María Ramírez, apendicitis aguda, A
+Denise Arellano, dolor en talones, D
+Víctor Peña, crisis de asma, B
+Carmen Sarmientos, dolores de parto, B
+Gerardo Fonseca, dolor articular crónico, D
+Gabriel Salgado, vacunación, E
+Natalia Fuentes, dolor torácico, B
+Lucila Cerda, solicitud de receta, E
+Ximena Andrade, quiste sebáceo infectado, C
+Osvaldo Bello, inflamación de encías, D
+Ana González, accidente cerebrovascular, A
+Alicia Montoya, forúnculo, C
+Roberto Martínez, hemorragia digestiva severa, A
+Lorenzo Toledo, chikunguya, D
+José Luis Morales, cálculos renales, B
+Darío Sepúlveda, ardor estomacal, D
+Germán Farías, alergia estacional leve, E
+Lucía Molina, migraña severa, B
+Rafael Acosta, eczema, D
+Paulina Escobar, renovación de antidepresivos, E
+Alma Poblete, tos seca, D
+Patricio Latorre, revisión de puntos, D
+Juan Pérez, fractura de pierna, C
+Esteban Arce, herpes zóster, C
+Pilar Sandoval, insomnio, D
+Guillermo Torres, esguince severo, B
+Marco Becerra, control de diabetes estable, E
+Angélica Domínguez, urticaria, C
+Enrique Montes, torcedura de muñeca, C
+Carolina Barrios, hiperglucemia leve, C
+Eduardo Sánchez, cetoacidosis diabética, A
+Héctor Vega, neumonía, B
+Camila Vargas, meningitis, A
+Alfredo Valencia, contusión muscular, C
+Félix Araya, dermatitis, D
+Miguel Saavedra, examen preventivo, E
+Rosario Muñoz, control de tensión, D
+Francisco Navarro, arritmia cardíaca, B
+Karen Donoso, hematoma leve, D
+Olga Mardones, consulta dermatológica, E
+Vicente Yáñez, problemas de digestión, D
+Bárbara Pino, ligero resfrío, E
+Ernesto Guerrero, amigdalitis, C
+Daniel Inostroza, reevaluación de tratamiento, E
+Cristóbal Solís, cuerpo extraño en ojo, C
+Gregorio Vidal, orientación dietética, E
+Marta Parra, revisión de tiroides, E
+Sandra Cruz, infección en herida, C
+Felipe Ríos, faringitis aguda, C
+Jorge Meléndez, corte profundo, C
+Mauricio Quiroz, ciática, C
+Irene Carvajal, vómitos y diarrea, C
+Julio Robles, cambio de receta, D
+Mónica Peralta, sinusitis aguda, C
+Luisa Maldonado, tendinitis leve, D
+Lorena Guerra, menstruación abundante, C
+Federico Mercado, uña encarnada, D
+Sergio Castillo, certificado médico, E
+Nelson Arroyo, examen de vista, E
+Valeria Ochoa, cefalea tensional, C
+Cecilia Mora, fiebre alta, C
+Antonio Rojas, luxación de hombro, B
+Susana León, reacción alérgica leve, C
+Beatriz Norambuena, control ginecológico, E
+Miguel Ángel Castro, herida por arma de fuego, A
+Patricia Aguilar, crisis hipertensiva, B
+Bruno Segovia, calambre muscular, D
+Fernanda Duarte, hemorragia nasal persistente, C
+Mateo Figueroa, torcedura de tobillo, C
+Ángela Cuevas, receta para inyecciones, E
+Josefina Sepúlveda, leve dolor de espalda, E
+Gabriela Núñez, electrocución grave, A
+Gerardo Soto, diarrea y deshidratación leve, C
+Javier Orellana, irritación ocular, D
+Francisco Arancibia, evaluación física, E
+Liliana Villegas, acné severo, D
+Joaquín Gallardo, otitis media, C
+Octavio Núñez, control de medicina crónica, E
+Alonso Román, evaluación preoperatoria, E
+Silvia Orrego, revisión ocular, E
+Mario Barrientos, ligero dolor de cabeza, D
+Hernán Jaramillo, control de salud, E
+Beatriz Campos, deshidratación severa, B
+Rodrigo Valdivieso, revisión médica laboral, E
+Amanda Vera, picadura de abeja, C
+Nicolás Rosales, corte menor, C
+Cristián Galindo, revisión postoperatoria, D
+Diego Rivera, alergia moderada, B
+Salvador Guzmán, contusión craneal moderada, B
+Nancy Saavedra, inflamación leve, D
+Tatiana Blanco, ojo rojo, C
+Silvia Méndez, intoxicación alimentaria, B
+Daniela Herrera, insuficiencia respiratoria aguda, A
+Laura Jiménez, paro cardíaco, A
+Alejandro Gómez, embolia pulmonar, A
+Adriana Moreno, sepsis, A
+Rodrigo Pacheco, traumatismo leve, C
+Catalina Lizama, estornudos frecuentes, D
+Gustavo Hidalgo, reacción a medicamento, C
+Teresa Cárdenas, cansancio, D
+Joel Durán, manchas en la piel, D
+Verónica Delgado, vómitos persistentes, B
+Tomás Benítez, hematuria, C
+Andrés Téllez, taquicardia, C
+Isabel Flores, quemaduras de tercer grado, A
+Amelia Jara, consulta de rutina, E
+Jessica Navarrete, descamación de piel, D
+Sebastián Cáceres, absceso dental, C
+Ernesto Millán, control de hipertensión estable, E
+Renata Luna, dislocación de dedo, C
+Rubén Bustos, infección dental, C
+Marcos Vergara, ronquera, D
+Hugo Alarcón, verrugas, D
+Viviana Soto, resultado de análisis, E
+Ricardo Medina, ahogamiento, A
+Javier López, traumatismo craneoencefálico grave, A
+Luis Rodríguez, obstrucción de vía aérea, A
+Juan Carlos Cifuentes, control de rutina, E
+Carlos Mendoza, infarto de miocardio, A
+Adriana Ponce, estreñimiento grave, C
+Julieta Palacios, mordedura de perro, C
+Antonia Solar, certificado deportivo, E
+Marcela Silva, aborto espontáneo, B
+Sonia Uribe, molestia urinaria leve, D
+Andrea Santis, seguimiento psicológico, E
+Alberto Velasco, esguince de tobillo, C
+Carla Moya, dolor muscular, D
+Elena Reyes, fractura de cadera, B
+Fernando Díaz, fractura expuesta de fémur, A
+Armando Leiva, congestión nasal, D
+Anita Arce, dolor articular leve, D
+Carlos Cabello, control postquirúrgico, E
+Emilio Paredes, dolor abdominal agudo, B
+Raúl Castro, bronquitis aguda, B
+Esperanza Prado, malestar estomacal leve, D
+Abril Tapia, cambio de vendaje, D
+Constanza Cortés, control de herida, D
+Susana Gálvez, consulta para viajero, E
+Augusto Roldán, dolor de garganta leve, D
+Arturo Coronado, dolor de oído, C
+Delia Godoy, resultados de laboratorio, E
+Romina Lara, manos secas, D
+Pablo Zamora, crisis de gota, C
+Claudio Miranda, picazón, D
+Simón Carrasco, fiebre sin foco, C
+Benjamín Salas, fiebre baja, D
+Leonardo Escobar, picadura de insecto con inflamación, C
+Álvaro Caro, revisión nutricional, E
+Ramón Águila, dolor crónico controlado, D
+Iván Chacón, molestia en oído, D
+Bianca Bustamante, problemas de presión arterial, C
+Gonzalo Valdivia, ardor al orinar leve, D
+Melisa Burgos, renovación de tratamiento, E
+Norma Ibarra, fatiga, D
+Leticia Cabrera, indigestión, D
+Francisca Madrid, afonía, D
+Elena Barros, resultados de mamografía, E
+Manuel Ortiz, convulsiones continuas, A
+Mercedes Bravo, rozadura, D
+Diana Lagos, dolor menstrual severo, C
+David Zúñiga, vértigo, C
+Leonel Aranda, secreción nasal, D
+Marina Aravena, seguimiento médico, D
+Margarita Roldán, úlcera péptica, C
+Óscar Rivas, infección urinaria complicada, B
+Valentina Ruiz, intoxicación grave, A
+Maximiliano Álvarez, control de presión, E
+Mariana Cordero, dolor dental severo, C
+Regina Padilla, resfriado común, D
+Ismael Calderón, estreñimiento, D
+Sofía Torres, shock anafiláctico, A
+Gloria Toro, receta de anticonceptivos, E
+Julia Romero, crisis de ansiedad, B
+Paola Pineda, colitis aguda, B
+Sara Leyton, renovación de receta, E
+Claudia Espinoza, quemaduras de primer grado, C
+Eva Palma, migraña, C
+Elisa Valenzuela, molestia en articulación, D
+Gisela Olivares, mareo leve, D
+Luciana Miranda, dolor lumbar agudo, C
+Olivia Ramos, fractura de dedo, C
+Ignacio Quintero, conjuntivitis, C
+Florencia Venegas, revisión de medicación, E
+Ignacio Beltrán, dolor leve de rodilla, E
+Andres Ismalej, dolor abdominal, C
+Adrian Penagos, dolor de cabeza, E
+Francis Davila, muela rota, C
+Jorge Villeda, pelo corto, E
+Arturo Solis, dolor en la rodilla, D
+Daniel Perez, quemadura de tercer grado, A
+Julia Ramirez, dolor de muela, D
+Pedro Sandoval, paro cardiaco, A
+Thomas Sanchez, quemadura de primer grado, B

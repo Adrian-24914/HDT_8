@@ -5,8 +5,7 @@
  * @author: Adrian Penagos y Andrés Ismalej
  */
 
-package uvg.com;
-
+package hdt8.src.main.java.uvg.com;
 public class PriorityQueue {
     
 }
