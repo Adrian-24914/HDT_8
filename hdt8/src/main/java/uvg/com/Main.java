@@ -3,8 +3,20 @@
  * Algoritmos y Estrcuturas de Datos
  * Ing. Douglas Barrios / Aux: Cristian Túnchez
  * @author: Adrian Penagos y Andrés Ismalej
+<<<<<<< HEAD
 */
 package uvg.com;
+=======
+ */
+
+package uvg.com;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import java.util.List;
+>>>>>>> 5cf561d48c861c7a83697018814a2cbf3b1d9011
 
 import java.io.IOException;
 import java.util.PriorityQueue;
@@ -15,6 +27,7 @@ import java.util.Scanner;
  * Permite al usuario elegir la implementación a utilizar
 */
 public class Main {
+<<<<<<< HEAD
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -71,6 +84,28 @@ public class Main {
             System.err.println("\nError: " + e.getMessage());
         } finally {
             scanner.close();
+=======
+    public static void main(String[] args) {
+        Lector lector = new Lector("pacientes.txt");
+        List<Paciente> pacientes = lector.leerPacientes();
+
+        if (pacientes.isEmpty()) {
+            System.out.println("No hay pacientes en la lista.");
+            return;
+        }
+
+        VectorHeap<Paciente> colaPrioridad = new VectorHeap<>();
+
+        // Insertar los pacientes en la cola de prioridad
+        for (Paciente paciente : pacientes) {
+            colaPrioridad.insert(paciente);
+        }
+
+        // Atender pacientes en orden de prioridad
+        System.out.println("Atendiendo pacientes en orden de prioridad:");
+        while (!colaPrioridad.isEmpty()) {
+            System.out.println(colaPrioridad.remove());
+>>>>>>> 5cf561d48c861c7a83697018814a2cbf3b1d9011
         }
     }
 }
