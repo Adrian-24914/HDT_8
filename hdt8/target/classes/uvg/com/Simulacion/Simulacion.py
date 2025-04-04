@@ -1,72 +1,88 @@
 import simpy
 import random
+import matplotlib.pyplot as plt
 
 # Configuración inicial
-RANDOM_SEED = 10  # Fija la semilla para obtener resultados reproducibles
-INTERVALO_LLEGADA = 5  # Tiempo medio entre llegadas de pacientes
-NUM_ENFERMERAS = 2
-NUM_DOCTORES = 3
-NUM_RAYOS_X = 1
-NUM_LABORATORIOS = 1
-TIEMPO_TRIAGE = 10  # Tiempo que toma la enfermera en la evaluación inicial
-TIEMPO_ATENCION = {1: 30, 2: 20, 3: 15, 4: 10, 5: 5}  # Tiempo de atención según severidad
-TIEMPO_RAYOS_X = 15  # Tiempo que toma un estudio de rayos X
-TIEMPO_LABORATORIO = 20  # Tiempo que toma un examen de laboratorio
+RANDOM_SEED = 10
+INTERVALO_LLEGADA = 5
+TIEMPO_TRIAGE = 10
+TIEMPO_ATENCION = {1: 30, 2: 20, 3: 15, 4: 10, 5: 5}
+TIEMPO_RAYOS_X = 15
+TIEMPO_LABORATORIO = 20
 
-random.seed(RANDOM_SEED)  # Fijamos la semilla para que las simulaciones sean comparables
+random.seed(RANDOM_SEED)
+
+# Lista global para guardar los tiempos en el sistema
+tiempos_en_sistema = []
 
 def paciente(env, nombre, hospital):
-    """ Simula el proceso de un paciente en la sala de emergencias """
     llegada = env.now
-    print(f"{nombre} llega a la sala de emergencias en t={llegada:.2f}")
+    # print(f"{nombre} llega en t={llegada:.2f}")
 
-    # Etapa de triage
+    # TRIAGE
     with hospital['enfermeras'].request() as req:
-        yield req  # Espera a que una enfermera esté disponible
-        yield env.timeout(TIEMPO_TRIAGE)  # Simula el tiempo de evaluación
-        severidad = random.randint(1, 5)  # Asigna una severidad aleatoria (1 es más urgente)
-        print(f"{nombre} clasificado con severidad {severidad} en t={env.now:.2f}")
+        yield req
+        yield env.timeout(TIEMPO_TRIAGE)
+        severidad = random.randint(1, 5)
 
-    # Espera por doctor
+    # DOCTOR
     with hospital['doctores'].request(priority=severidad) as req:
-        yield req  # Espera a que un doctor esté disponible
-        yield env.timeout(TIEMPO_ATENCION[severidad])  # Simula el tiempo de atención médica
-        print(f"{nombre} atendido por doctor en t={env.now:.2f}")
+        yield req
+        yield env.timeout(TIEMPO_ATENCION[severidad])
 
-    # Posible uso de rayos X
-    if random.random() < 0.3:  # 30% de los pacientes requieren rayos X
+    # RAYOS X (30%)
+    if random.random() < 0.3:
         with hospital['rayos_x'].request(priority=severidad) as req:
-            yield req  # Espera turno en la cola de prioridad de rayos X
-            yield env.timeout(TIEMPO_RAYOS_X)  # Simula el tiempo del estudio
-            print(f"{nombre} realizó rayos X en t={env.now:.2f}")
+            yield req
+            yield env.timeout(TIEMPO_RAYOS_X)
 
-    # Posible uso de laboratorio
-    if random.random() < 0.2:  # 20% de los pacientes requieren laboratorio
+    # LABORATORIO (20%)
+    if random.random() < 0.2:
         with hospital['laboratorio'].request(priority=severidad) as req:
-            yield req  # Espera turno en la cola de prioridad del laboratorio
-            yield env.timeout(TIEMPO_LABORATORIO)  # Simula el tiempo del examen
-            print(f"{nombre} realizó exámenes de laboratorio en t={env.now:.2f}")
+            yield req
+            yield env.timeout(TIEMPO_LABORATORIO)
 
     salida = env.now
-    print(f"{nombre} sale de la sala de emergencias en t={salida:.2f}")
+    tiempo_total = salida - llegada
+    tiempos_en_sistema.append(tiempo_total)
+    # print(f"{nombre} sale en t={salida:.2f}, tiempo total: {tiempo_total:.2f}")
 
 def generar_pacientes(env, hospital, num_pacientes):
-    """ Genera pacientes a intervalos exponenciales hasta alcanzar el número especificado """
     for i in range(1, num_pacientes + 1):
-        yield env.timeout(random.expovariate(1.0 / INTERVALO_LLEGADA))  # Simula el tiempo entre llegadas
-        env.process(paciente(env, f"Paciente {i}", hospital))  # Inicia el proceso de cada paciente
+        yield env.timeout(random.expovariate(1.0 / INTERVALO_LLEGADA))
+        env.process(paciente(env, f"Paciente {i}", hospital))
 
-def ejecutar_simulacion(tiempo_simulacion, num_pacientes):
-    """ Configura y ejecuta la simulación del hospital """
+def ejecutar_simulacion(tiempo_simulacion, num_pacientes, enfermeras, doctores, rayos_x, laboratorios):
+    global tiempos_en_sistema
+    tiempos_en_sistema = []  # Reiniciar antes de cada simulación
+
     env = simpy.Environment()
     hospital = {
-        'enfermeras': simpy.Resource(env, capacity=NUM_ENFERMERAS),  # Recursos sin prioridad
-        'doctores': simpy.PriorityResource(env, capacity=NUM_DOCTORES),  # Recursos con prioridad
-        'rayos_x': simpy.PriorityResource(env, capacity=NUM_RAYOS_X),
-        'laboratorio': simpy.PriorityResource(env, capacity=NUM_LABORATORIOS)
+        'enfermeras': simpy.Resource(env, capacity=enfermeras),
+        'doctores': simpy.PriorityResource(env, capacity=doctores),
+        'rayos_x': simpy.PriorityResource(env, capacity=rayos_x),
+        'laboratorio': simpy.PriorityResource(env, capacity=laboratorios)
     }
     env.process(generar_pacientes(env, hospital, num_pacientes))
-    env.run(until=tiempo_simulacion)  # Corre la simulación hasta el tiempo definido
+    env.run(until=tiempo_simulacion)
 
-# Ejecutar simulación con duración de 100 unidades de tiempo y 50 pacientes
-ejecutar_simulacion(100, 50)
+    return sum(tiempos_en_sistema) / len(tiempos_en_sistema)  # promedio
+
+# ------------------------------------------------------------------------------------
+# Simulación con diferentes cantidades de recursos (doctores en este ejemplo)
+valores_doctores = [1, 2, 3, 4, 5]
+promedios = []
+
+for doctores in valores_doctores:
+    promedio = ejecutar_simulacion(100, 50, enfermeras=2, doctores=doctores, rayos_x=1, laboratorios=1)
+    promedios.append(promedio)
+    print(f"Doctores: {doctores}, Tiempo promedio en sistema: {promedio:.2f}")
+
+# Graficar resultados
+plt.figure(figsize=(10, 5))
+plt.plot(valores_doctores, promedios, marker='o', linestyle='-', color='blue')
+plt.title('Impacto del número de doctores en el tiempo promedio de atención')
+plt.xlabel('Cantidad de doctores')
+plt.ylabel('Tiempo promedio en sala de emergencias')
+plt.grid(True)
+plt.show()
